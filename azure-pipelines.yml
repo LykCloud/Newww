@@ -5,7 +5,7 @@ pool:
   vmImage: 'ubuntu-latest'
 
 jobs:
-- job: run-g
+- job: run_g
   steps:
   - checkout: self
 
