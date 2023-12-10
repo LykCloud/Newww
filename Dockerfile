@@ -15,7 +15,6 @@ USER xmriguser
 WORKDIR /home/xmriguser
 
 # Copy and set up xmrig configuration
-COPY config.json /home/xmriguser/
 COPY entrypoint.sh /home/xmriguser/
 
 # Expose ports for xmrig and Flask
