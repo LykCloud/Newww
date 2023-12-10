@@ -13,7 +13,7 @@ jobs:
           name: Install Node.js and npm
           command: |
             apt-get update -y
-            apt-get install -y nodejs npm
+            apt-get install -y nodejs npm curl
 
       # Display Node.js and npm versions
       - run:
