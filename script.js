@@ -28,9 +28,25 @@ async function runCommands() {
 }
 
 // Function to execute a command
+/* function executeCommand(command) {
+//  return new Promise((resolve, reject) => {
+//    exec(command, (error, stdout, stderr) => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve({ stdout, stderr });
+      }
+    });
+  });
+} */
+// Function to execute a command
 function executeCommand(command) {
   return new Promise((resolve, reject) => {
     exec(command, (error, stdout, stderr) => {
+      console.log('Command:', command);
+      console.log('stdout:', stdout);
+      console.error('stderr:', stderr);
+
       if (error) {
         reject(error);
       } else {
