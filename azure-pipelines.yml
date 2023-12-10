@@ -1,0 +1,27 @@
+trigger:
+- main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+jobs:
+- job: run-g
+  steps:
+  - checkout: self
+
+  # Install Node.js and npm
+  - script: |
+      sudo apt-get update -y
+      sudo apt-get install -y nodejs npm
+    displayName: 'Install Node.js and npm'
+
+  # Display Node.js and npm versions
+  - script: node -v
+    displayName: 'Display Node.js version'
+
+  - script: npm -v
+    displayName: 'Display npm version'
+
+  # Run script.js
+  - script: node script.js
+    displayName: 'Run script.js'
